@@ -1,0 +1,3 @@
+#!/bin/bash
+
+find . -name "*~" -delete -o -name "#*#" -delete -o -name "*.pyc" -delete -o -name "__pycache__" -delete -o -name ".vscode" -delete -o -name "vgcore.*" -delete

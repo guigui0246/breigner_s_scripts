@@ -1,0 +1,26 @@
+#!/bin/bash
+
+clean
+
+if [ "$#" -eq 1 ]
+then
+    make -s
+fi
+
+if [ $? = 0 ] && [ "$#" -eq 1 ]
+then
+    echo -e "\e[38;5;46mMake Success\e[0m"
+    make fclean -s
+    git add --all
+    git commit -m $1
+    git push
+elif [ "$#" -eq 2 ] && [ $2 = no_make ]
+then
+    echo -e "\e[38;5;45mNo Make to do\e[0m"
+    git add --all
+    git commit -m $1
+    git push
+else
+    echo -e "\e[38;5;196mMake failed\e[0m"
+    make fclean -s
+fi

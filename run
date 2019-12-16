@@ -1,0 +1,7 @@
+#!/bin/bash
+
+SOURCE_FOLDER=/home/Breigner01/Documents/EPITECH/Tek1/Semester-1/
+
+DEST_FOLDER=/home/student/
+
+docker run --rm -v "$SOURCE_FOLDER:$DEST_FOLDER" -it epitechcontent/epitest-docker /bin/bash -c 'useradd student && su - student'
