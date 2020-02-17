@@ -1,10 +1,10 @@
 # my_scripts
 
-These are all my scripts that I use dayly.
+These are all my scripts that I use daily.
 
 ## Use
 
-To be able to use these script in any directory you may want to add the following line to your .bashrc or .zshrc or any other shell config file depending on the shell you use:
+To be able to use these scripts in any directory you may want to add the following line to your .bashrc or .zshrc or any other shell config file depending on the shell you use:
 
 ```bash
 export PATH=$HOME/path-to-my_scripts/:$PATH
@@ -14,7 +14,7 @@ If you want to also be able to use it in root do this also for the root user.
 
 # build_csfml.sh
 
-This script is installs the csfml library for Epitech.
+This script installs the csfml library for Epitech.
 
 # clean
 
@@ -34,7 +34,7 @@ This script installs the criterion library to allow you to make unit tests for y
 
 # push
 
-This script add all the files then commit them with the commit message you gave it in argument and finally pushes everything. If you use a Makefile it will do a make if the make fails it warns you and doesn't push but if you do not use any Makefile then you could use the <no_make> option.
+This script adds all the files then commit them with the commit message you gave it in argument and finally pushes everything. If you use a Makefile it will do a make if the make fails it warns you and doesn't push but if you do not use any Makefile then you could use the <no_make> option.
 You need to use the script this way:
 
 ```bash
@@ -47,7 +47,7 @@ This is a script to create an Epitech repo, to use it change the email adress by
 
 # run
 
-This script runs the with the disk image of the moulinette at Epitech to allow you to verify if your program works with the versions of python of the moulinette for example.
+This script runs the disk image of the moulinette at Epitech to allow you to verify if your program works with the versions of python of the moulinette for example.
 You first need to install docker then you need to start Docker with the following command:
 
 ```bash
