@@ -43,9 +43,7 @@ push <commit message> <no_make>
 
 # repo
 
-This is a script to create an Epitech repo, to use it change the email adress by yours and the repo name is given as an argument.
-
-## Use
+This is a script to create an Epitech repo, to use it change the email adress by yours and the repo name is given as an argument. You need to use it this way:
 
 ```bash
 repo <repo_name>
