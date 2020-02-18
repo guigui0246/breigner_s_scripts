@@ -45,6 +45,12 @@ push <commit message> <no_make>
 
 This is a script to create an Epitech repo, to use it change the email adress by yours and the repo name is given as an argument.
 
+## Use
+
+```bash
+repo <repo_name>
+```
+
 # run
 
 This script runs the disk image of the moulinette at Epitech to allow you to verify if your program works with the versions of python of the moulinette for example.
