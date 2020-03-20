@@ -8,13 +8,18 @@ git config --global user.email benjamin.reigner@epitech.eu
 # Create Folders
 
 cd ~/Documents/
+mkdir Associations
 mkdir EPITECH
-cd EPTIECH/
+mkdir Github
+mkdir Gitlab
+git clone git@github.com:Breigner01/libs.git
+cd EPITECH/
 mkdir Tek1
 mkdir Tek2
 mkdir Tek3
 mkdir Tek4
 mkdir Tek5
+mkdir PoC
 mkdir Ecrits-pros
 mkdir Coding-Club
 
@@ -23,7 +28,12 @@ mkdir Coding-Club
 cd Tek1/
 mkdir CPool_Part1
 mkdir CPool_Part2
-mkdir Semester-1
+mkdir CPE
+mkdir MAT
+mkdir MUL
+mkdir PSU
+mkdir Stumpers
+git clone git@git.epitech.eu:/benjamin.reigner@epitech.eu/Subjects_S1
 
 # C Pool
 
@@ -56,35 +66,73 @@ git clone git@git.epitech.eu:/benjamin.reigner@epitech.eu/CPool_evalexpr_bootstr
 git clone git@git.epitech.eu:/benjamin.reigner@epitech.eu/CPool_evalexpr_2019
 git clone git@git.epitech.eu:/benjamin.reigner@epitech.eu/CPool_bistro-matic_2019
 
-# Semester 1
+# CPE
 
-cd ../Semester-1/
-git clone git@git.epitech.eu:/benjamin.reigner@epitech.eu/Subjects_S1
-git clone git@git.epitech.eu:/benjamin.reigner@epitech.eu/CSFML
-git clone git@git.epitech.eu:/benjamin.reigner@epitech.eu/PSU_my_printf_bootstrap_2019
-git clone git@git.epitech.eu:/benjamin.reigner@epitech.eu/PSU_my_printf_2019
+cd ../CPE
 git clone git@git.epitech.eu:/benjamin.reigner@epitech.eu/CPE_BSQ_2019
-git clone git@git.epitech.eu:/benjamin.reigner@epitech.eu/MUL_my_hunter_2019
-git clone git@git.epitech.eu:/benjamin.reigner@epitech.eu/101pong_2019
-git clone git@git.epitech.eu:/benjamin.reigner@epitech.eu/102architect_2019
 git clone git@git.epitech.eu:/benjamin.reigner@epitech.eu/CPE_pushswap_bootstrap_2019
 git clone git@git.epitech.eu:/benjamin.reigner@epitech.eu/CPE_pushswap_2019
+git clone git@git.epitech.eu:/benjamin.reigner@epitech.eu/CPE_getnextline_2019
+
+# MAT
+
+cd ../MAT
+git clone git@git.epitech.eu:/benjamin.reigner@epitech.eu/101pong_2019
+git clone git@git.epitech.eu:/quentin.fringhian@epitech.eu/102architect_2019
+git clone git@git.epitech.eu:/benjamin.reinger@epitech.eu/103cipher_2019
+git clone git@git.epitech.eu:/benjamin.reigner@epitech.eu/104intersection_2019
+git clone git@git.epitech.eu:/coline.seguret@epitech.eu/105torus_2019
+
+# MUL
+
+cd../MUL
+git clone git@git.epitech.eu:/benjamin.reigner@epitech.eu/MUL_my_hunter_2019
+git clone git@git.epitech.eu:/benjamin.reigner@epitech.eu/MUL_my_runner_2019
+
+# PSU
+
+cd ../PSU
+git clone git@git.epitech.eu:/benjamin.reigner@epitech.eu/PSU_my_printf_bootstrap_2019
+git clone git@git.epitech.eu:/benjamin.reigner@epitech.eu/PSU_my_printf_2019
 git clone git@git.epitech.eu:/benjamin.reigner@epitech.eu/PSU_my_popup_2019
 git clone git@git.epitech.eu:/benjamin.reigner@epitech.eu/PSU_my_sokoban_2019
-git clone git@git.epitech.eu:/benjamin.reinger@epitech.eu/103cipher_2019
-git clone git@git.epitech.eu:/benjamin.reigner@epitech.eu/MUL_my_runner_2019
+git clone git@git.epitech.eu:/benjamin.reigner@epitech.eu/PSU_my_ls_2019
+git clone git@git.epitech.eu:/benjamin.reigner@epitech.eu/PSU_minishell1_2019
+git clone git@git.epitech.eu:/benjamin.reigner@epitech.eu/PSU_navy_2019
+git clone git@git.epitech.eu:/benjamin.reigner@epitech.eu/PSU_tetris_2019
 
 # Ecrits-Pros
 
 cd ../../Ecrits-pros/
 git clone git@git.epitech.eu:/benjamin.reigner@epitech.eu/Subjects_B1-FR
 git clone git@git.epitech.eu:/benjamin.reigner@epitech.eu/B1Mailpro
+git clone git@git.epitech.eu:/benjamin.reigner@epitech.eu/B1Rush
+git clone git@git.epitech.eu:/benjamin.reigner@epitech.eu/B1Lettre
+git clone git@git.epitech.eu:/benjamin.reigner@epitech.eu/B2EMPLOI
+git clone git@git.epitech.eu:/benjamin.reigner@epitech.eu/B2PRECISER
 
 # Coding Club
 
 cd ../Coding-Club
 git clone git@git.epitech.eu:/benjamin.reigner@epitech.eu/Subjects_Cobra
 git clone git@git.epitech.eu:/benjamin.reigner@epitech.eu/Cobra_Tamagotchi_Ruby_2019
+
+# Github
+
+cd ../../Github
+mkdir Dipstax
+mkdir Repos
+cd Dipstax
+git clone git@github.com:Dipstax/lib_maths.git
+cd ../Repos
+
+# PoC
+
+## Pool
+
+cd ../../EPITECH/PoC/
+git clone git@github.com:Breigner01/Security_Pool.git
+git clone git@github.com:Breigner01/Hardware_Pool.git
 
 # Install Scripts
 
@@ -98,9 +146,7 @@ mv Docs/docs/ Docs/Oursin/
 
 # Install Programs
 
-sudo su
-echo "exclude=kernel*" >> /etc/dnf/dnf.conf
-exit
+sudo echo "exclude=kernel*" >> /etc/dnf/dnf.conf
 sudo dnf install https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm
 sudo dnf install https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
 sudo dnf install discord
@@ -108,7 +154,10 @@ sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc
 sudo sh -c 'echo -e "[code]\nname=Visual Studio Code\nbaseurl=https://packages.microsoft.com/yumrepos/vscode\nenabled=1\ngpgcheck=1\ngpgkey=https://packages.microsoft.com/keys/microsoft.asc" > /etc/yum.repos.d/vscode.repo'
 sudo dnf install code
 sudo dnf groupinstall -y "KDE Plasma Workspaces"
+sudo systemctl disable lightdm
+sudo systemctl enable sddm
 sudo dnf install terminator
+sudo dnf install snapd
 
 # Docker
 
@@ -126,36 +175,79 @@ bash -c "$(curl -fsSL https://raw.github.com/PaulMonnery/personnal_conf/master/i
 # Config .zshrc
 
 sed -i s/ZSH_THEME=\"robbyrussell\"/ZSH_THEME=\"sporty_256\"/g .zshrc
-echo "# SSH Server\
-\
-alias sshserver=\"systemctl enable sshd\"\
-\
-# my aliases\
-\
-export PATH=$HOME/my_scripts/:$PATH\
-alias ne=\"emacs -nw\"\
-alias Wgcc=\"gcc -Wall -Wextra -Werror\"\
-alias sshE=\"ssh benjamin@houzebel.j3t.eu\"\
-\
-# Folder aliases\
-\
-alias subjects=\"cd /home/Breigner01/Documents/EPITECH/Tek1/Semester-1/Subjects_S1/\"\
-alias CPool=\"cd /home/Breigner01/Documents/EPITECH//Tek1/CPool_Part1/\"\
-alias bistro=\"cd /home/Breigner01/Documents/EPITECH//Tek1/CPool_Part2/\"\
-alias pong=\"cd /home/Breigner01/Documents/EPITECH/Tek1/Semester-1/101pong_2019/\"\
-alias printf=\"cd /home/Breigner01/Documents/EPITECH/Tek1/Semester-1/PSU_my_printf_2019/\"\
-alias bsq=\"cd /home/Breigner01/Documents/EPITECH/Tek1/Semester-1/CPE_BSQ_2019/\"\
-alias hunter=\"cd /home/Breigner01/Documents/EPITECH/Tek1/Semester-1/MUL_my_hunter_2019/\"\
-alias architect=\"cd /home/Breigner01/Documents/EPITECH/Tek1/Semester-1/102architect_2019/\"\
-alias sokoban=\"cd /home/Breigner01/Documents/EPITECH/Tek1/Semester-1/PSU_my_sokoban_2019/\"\
-alias pushswap=\"cd /home/Breigner01/Documents/EPITECH/Tek1/Semester-1/CPE_pushswap_2019/\"\
-\
-# Shell conf\
-\
-alias zshrc=\"emacs -nw $HOME/.zshrc\"\
-alias bashrc=\"emacs -nw $HOME/.bashrc\"\
-alias szsh=\"source /home/Breigner01/.zshrc\"\
-\
-# Android Studio\
-\
-export PATH=$HOME/android-studio/bin:$PATH" >> .zshrc
+echo "# PATH"
+echo
+echo "export PATH=$HOME/my_scripts:$PATH"
+echo "export PATH=$HOME/Flutter/flutter/bin:$PATH"
+echo "export PATH=$HOME/platform-tools:$PATH"
+echo "export PATH=/opt/firefox/firefox:$PATH"
+echo
+echo "# My aliases"
+echo
+echo "alias ne=\"emacs -nw\""
+echo "alias wifi_start=\"ifconfig enp0s20f0u2\""
+echo "alias tgdb=\"gdb -tui\""
+echo "alias zshrc=\"emacs -nw ~/.zshrc\""
+echo "alias szsh=\"source ~/.zshrc\""
+echo "alias Wgcc=\"gcc -Wall -Wextra -Werror\""
+echo "alias sshserver=\"systemctl enable sshd\""
+echo "alias docker_start=\"\""
+echo
+echo "# Git aliases"
+echo
+echo "alias url=\"git config --get remote.origin.url\""
+echo
+echo "# Folder aliases"
+echo
+echo "## Tek1"
+echo
+echo "alias Tek1=\"cd ~/Documents/EPITECH/Tek1/\""
+echo "alias subject=\"cd ~/Documents/EPITECH/Tek1/Subjects_S1/\""
+echo
+echo "### Pool"
+echo
+echo "alias c_pool=\"cd ~/Documents/EPITECH/Tek1/CPool_Part1/\""
+echo "alias bistro=\"cd ~/Documents/EPITECH/Tek1/CPool_Part2/\""
+echo
+echo "### CPE"
+echo
+echo "alias CPE1=\"cd ~/Documents/EPITECH/Tek1/CPE/\""
+echo "alias BSQ=\"cd ~/Documents/EPITECH/Tek1/CPE/CPE_BSQ_2019/\""
+echo "alias pushswap=\"cd ~/Documents/EPITECH/Tek1/CPE/CPE_pushswap_2019/\""
+echo "alias GNL=\"cd ~/Documents/EPITECH/Tek1/CPE/CPE_getnextline_2019/\""
+echo "alias matchstick=\"cd ~/Documents/EPITECH/Tek1/CPE/CPE_matchstick_2019/\""
+echo "alias dante=\"cd ~/Documents/EPITECH/Tek1/CPE/CPE_dante_2019/\""
+echo
+echo "### MAT"
+echo
+echo "alias MAT1=\"cd ~/Documents/EPITECH/Tek1/MAT/\""
+echo "alias pong=\"cd ~/Documents/EPITECH/Tek1/MAT/101pong_2019/\""
+echo "alias architect=\"cd ~/Documents/EPITECH/Tek1/MAT/102architect_2019/\""
+echo "alias cipher=\"cd ~/Documents/EPITECH/Tek1/MAT/103cipher_2019/\""
+echo "alias intersection=\"cd ~/Documents/EPITECH/Tek1/MAT/104intersection_2019/\""
+echo "alias torus=\"cd ~/Documents/EPITECH/Tek1/MAT/105torus_2019/\""
+echo "alias bombyx=\"cd ~/Documents/EPITECH/Tek1/MAT/106bombyx_2019/\""
+echo "alias transfer=\"cd ~/Documents/EPITECH/Tek1/MAT/107transfer_2019\""
+echo "alias trigo=\"cd ~/Documents/EPITECH/Tek1/MAT/108trigo_2019\""
+echo
+echo "### MUL"
+echo
+echo "alias MUL1=\"cd ~/Documents/EPITECH/Tek1/MUL/\""
+echo "alias hunter=\"cd ~/Documents/EPITECH/Tek1/MUL/MUL_my_hunter_2019/\""
+echo "alias runner=\"cd ~/Documents/EPITECH/Tek1/MUL/MUL_my_runner_2019/\""
+echo "alias defender=\"cd ~/Documents/EPITECH/Tek1/MUL/MUL_my_defender_2019/\""
+echo "alias rpg=\"cd ~/Documents/EPITECH/Tek1/MUL/MUL_my_rpg_2019\""
+echo
+echo "### PSU"
+echo
+echo "alias PSU1=\"cd ~/Documents/EPITECH/Tek1/PSU/\""
+echo "alias printf=\"cd ~/Documents/EPITECH/Tek1/PSU/PSU_my_printf_2019/\""
+echo "alias sokoban=\"cd ~/Documents/EPITECH/Tek1/PSU/PSU_my_sokoban_2019/\""
+echo "alias my_ls=\"cd ~/Documents/EPITECH/Tek1/PSU/PSU_my_ls_2019/\""
+echo "alias minish1=\"cd ~/Documents/EPITECH/Tek1/PSU/PSU_minishell1_2019/\""
+echo "alias navy=\"cd ~/Documents/EPITECH/Tek1/PSU/PSU_navy_2019/\""
+echo "alias tetris=\"cd ~/Documents/EPITECH/Tek1/PSU/PSU_tetris_2019\""
+echo
+echo "### Stumpers"
+echo
+echo "alias stumper=\"cd ~/Documents/EPITECH/Tek1/Stumpers/\""

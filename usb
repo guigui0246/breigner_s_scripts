@@ -1,0 +1,53 @@
+#!/bin/bash
+
+if [ "$#" -eq 2 ] && [ $1 = mount ]
+then
+    mkdir $HOME/$2
+    if [ $? = 0 ]
+    then
+        echo -e "\e[38;5;46mCreated directory $HOME/$2\e[0m"
+        sudo mount /dev/$2 $HOME/$2
+        if [ $? = 0 ]
+        then
+            cd $HOME/$2
+            echo -e "\e[38;5;46mSuccessfully mounted /dev/$2 to $HOME/$2\e[0m"
+        fi
+    else
+        echo -e "\e[38;5;196mDirectory could not be created\e[0m"
+    fi
+elif [ "$#" -eq 3 ] && [ $1 = mount ]
+then
+    mkdir $3
+    if [ $? = 0 ]
+    then
+        echo -e "\e[38;5;46mCreated directory $3\e[0m"
+        sudo mount /dev/$2 $3
+        if [ $? = 0 ]
+        then
+            cd $3
+            echo -e "\e[38;5;46mSuccessfully mounted /dev/$2 to $3\e[0m"
+        fi
+    else
+        echo -e "\e[38;5;196mDirectory could not be created\e[0m"
+    fi
+elif [ "$#" -eq 2 ] && [ $1 = unmount ]
+then
+    sudo umount $2
+    if [ $? = 0 ]
+    then
+        rm -rf $2
+        echo -e "\e[38;5;46mSuccessfully unmounted $2\e[0m"
+    fi
+else
+    echo "Missing parameters ..."
+    echo ""
+    echo "USAGE"
+    echo "\tusb <action> <device> <folder>"
+    echo ""
+    echo "OPTIONS"
+    echo "\taction\tmount or unmount depends on what you want"
+    echo "\tdevice\trequire the name of the device in /dev/ (only for mount)"
+    echo "\tfolder\trequired for unmount and optional for mount"
+    echo "\t\tif none is given for mount then it's mounted by default in a"
+    echo "\t\tdirectory in your home directory with the name of the device"
+fi

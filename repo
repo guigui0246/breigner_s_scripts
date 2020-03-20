@@ -5,6 +5,8 @@ blih -u benjamin.reigner@epitech.eu repository setacl $1 ramassage-tek r
 blih -u benjamin.reigner@epitech.eu repository getacl $1
 git clone git@git.epitech.eu:/benjamin.reigner@epitech.eu/$1
 
+cp ~/Documents/libs/git_config/* $1
+
 if [ "$#" -eq 2 ] && [ $2 = C ]
 then
     cp -r ~/Documents/libs/c-lib/* $1
