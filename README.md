@@ -49,6 +49,15 @@ This is a script to create an Epitech repo, to use it change the email adress by
 repo <repo_name>
 ```
 
+# repo_init
+
+This is a script to initialize a folder as a repository, to use it change the email address and the username by yours and you give the domain (epitech or github) as well as the repo name as arguments.
+You need to use it this way:
+
+```bash
+repo_init <domain> <repo_name>
+```
+
 # run
 
 This script runs the disk image of the moulinette at Epitech to allow you to verify if your program works with the versions of python of the moulinette for example.
