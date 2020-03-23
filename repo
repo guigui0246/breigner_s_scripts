@@ -1,0 +1,33 @@
+#!/bin/bash
+
+blih -u benjamin.reigner@epitech.eu repository create $1
+if [ $? -eq 0 ]
+then
+    blih -u benjamin.reigner@epitech.eu repository setacl $1 ramassage-tek r
+    if [ $? -eq 0 ]
+    then
+        blih -u benjamin.reigner@epitech.eu repository getacl $1
+        if [ $? -eq 0 ]
+        then
+            git clone git@git.epitech.eu:/benjamin.reigner@epitech.eu/$1
+            if [ $? -eq 0 ]
+            then
+                echo -e "\e[38;5;46mSuccesfuly created and cloned repository, ACL succesfuly applied\e[0m"
+        else
+            echo -e "\e[38;5;45mCannot get repository rights\e[0m"
+    else
+        echo -e "\e[38;5;45mCannot give read permission to ramassage_tek\e[0m"
+else
+    echo -e "\e[38;5;45mCannot create repository\e[0m"
+
+<<<<<<< HEAD
+if [ "$#" -eq 2 ] && [ $2 = C ] && [ $? -eq 0 ]
+=======
+cp ~/Documents/libs/git_config/* $1
+
+if [ "$#" -eq 2 ] && [ $2 = C ]
+>>>>>>> c334569d000c9acff86318b8bcd03ee498df6ea3
+then
+    cp -r ~/Documents/libs/c-lib/* $1
+    echo -e "\e[38;5;45mAdded lib to repo\e[0m"
+fi

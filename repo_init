@@ -12,24 +12,24 @@ if [ "$#" -eq 2 ]
 then
     if [ $1 = github ]
     then
-        url = "git@github.com:Breigner01"
-        end = ".git"
+        url="git@github.com:Breigner01/"
+        end=".git"
     elif [ $1 = epitech ]
     then
-        url = "git@git.epitech.eu:benjamin.reigner@epitech.eu"
-        end = ""
+        url="git@git.epitech.eu:benjamin.reigner@epitech.eu/"
+        end=""
     else
         echo -e "\e[38;5;45mUnknown domain\e[0m"
         exit
     fi
-    repo = $2
+    repo=$2
 else
     echo -e "\e[38;5;45mWrong number of arguments\e[0m"
     helps
     exit
 fi
 
-repo_url = '$url/$repo$end'
+repo_url=$url$repo$end
 
 git init
 git add --all
