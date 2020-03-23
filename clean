@@ -1,3 +1,14 @@
 #!/bin/bash
 
-find . -name "*~" -delete -o -name "#*#" -delete -o -name "*.pyc" -delete -o -name "__pycache__" -delete -o -name ".vscode" -delete -o -name "vgcore.*" -delete
+find .                             \
+     \(                            \
+     -name "*~" -o                 \
+     -name "#*#" -o                \
+     -name "*.pyc" -o              \
+     -name "__pycache__" -o        \
+     -name ".vscode" -o            \
+     -name "vgcore.*" -o           \
+     -name ".idea" -o              \
+     -name ".gdb_history" -o       \
+     -name "peda-session-*.txt" \) \
+     -print -exec rm -rf {} +

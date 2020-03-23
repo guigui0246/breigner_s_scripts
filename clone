@@ -1,3 +1,3 @@
 #!/usr/bin/bash
 
-git clone git@git.epitech.eu:/$1/$2
+git clone git@git.epitech.eu:$1@epitech.eu/$2
