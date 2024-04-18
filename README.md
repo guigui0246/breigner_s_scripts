@@ -4,13 +4,19 @@ These are all my scripts that I use daily.
 
 ## Use
 
-To be able to use these scripts in any directory you may want to add the following line to your .bashrc or .zshrc or any other shell config file depending on the shell you use:
+To be able to use these scripts in any directory and in any app started from you terminal you may want to add the following line to your .bashrc or .zshrc or any other shell config file depending on the shell you use:
 
 ```bash
 export PATH=$HOME/path-to-my_scripts/:$PATH
 ```
 
-If you want to also be able to use it in root do this also for the root user.
+If you want to also be able to use them as root do this also for the root user.
+
+If you want any user to be able to use them you can also put the preceding line in a .sh file in the /etc/profile.d folder
+
+If you only want some of the commands in the folder or do not want even apps started by user in a terminal to run them consider using aliases to the complete path of the command in a .sh file in /etc/profile.d or in your shell config file
+
+To be able to use them with any user and any app you can also copy them to /usr/bin.
 
 # build_csfml.sh
 
